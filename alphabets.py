@@ -1,9 +1,11 @@
 import math
 #calcul d'entropie
 def entropie(n):
+	"Fonction qui calcule l'entropie"
 	return (math.log2(n))
 
 def longueurmoy(c, n):
+	"Fonction qui calcule la longueur moyenne d'un  code"
 	som = 0
 	j =0
 	while j < len(c):
@@ -14,10 +16,12 @@ def longueurmoy(c, n):
 		
 #cacul de longueur minimum		
 def longueurmin(entropie, n):
+	"La fonction qui calcule la longueur minimale d'un code"
 	return entropie/math.log2(n)
 
 #calcul de rendement
 def rendement(longueurmin, longueurmoy):
+	"fonction qui calcule le rendement"
 	return longueurmin/longueurmoy	
 
 	
@@ -59,7 +63,7 @@ def main():
 	redon = 1 - rend
 	if drapeau == 1: #si oui alors c'est un code 
 
-		print("Le mot {} est un code".format(nouveau_code))
+		print("L'ensemble de mot {} est un code".format(nouveau_code))
 		print("Les caracteristiques sont:")
 		print("      |--*--> Entropie     : ", ento)
 		print("      |--*--> Longueur min : ", longMin)
@@ -77,10 +81,10 @@ def main():
 		if count==1:		
 			print("      |--*--> Ce code {} est linéaire puisqu'il contient au moins un mot nul.".format(nouveau_code))
 		else:	
-			print("      |--*--> Ce code n'est pas linéaire par ce qu'il ne contient aucun mot null.")	
+			print("      |--*--> Ce code {} n'est pas linéaire par ce qu'il ne contient aucun mot null.".format(nouveau_code))	
 
 	else: #sinon ce n'est pas un code
-		print("Le mot {} n'est un code, desolé !!! ".format(nouveau_code))
+		print("L'ensemble de mot {} n'est un code, desolé !!! ".format(nouveau_code))
 		
 
 #---------------------Programme principal---------------------
